@@ -105,10 +105,81 @@ ielts-institute/
 
 ## 🚀 Deployment
 
-The application can be deployed to any static hosting service:
+### Vercel Deployment (Recommended)
+
+#### Method 1: Deploy via Vercel CLI
+
+1. **Install Vercel CLI globally**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Login to Vercel**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy from your project directory**
+   ```bash
+   cd ielts-institute
+   vercel
+   ```
+
+4. **Follow the prompts**:
+   - Set up and deploy? `Y`
+   - Which scope? (Choose your account)
+   - Link to existing project? `N`
+   - Project name: `ielts-institute` (or your preferred name)
+   - Directory: `./` (current directory)
+   - Override settings? `N`
+
+5. **Your app will be deployed** and you'll get a URL like `https://ielts-institute-xxx.vercel.app`
+
+#### Method 2: Deploy via GitHub (Recommended for continuous deployment)
+
+1. **Push your code to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/ielts-institute.git
+   git push -u origin main
+   ```
+
+2. **Go to [Vercel Dashboard](https://vercel.com/dashboard)**
+
+3. **Click "New Project"**
+
+4. **Import your GitHub repository**
+
+5. **Configure the project**:
+   - Framework Preset: `Create React App`
+   - Root Directory: `./`
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+   - Install Command: `npm install`
+
+6. **Click "Deploy"**
+
+#### Method 3: Deploy via Vercel Website
+
+1. **Go to [Vercel](https://vercel.com) and sign up/login**
+
+2. **Click "New Project"**
+
+3. **Upload your project folder** or connect to Git repository
+
+4. **Configure settings**:
+   - Framework: Create React App
+   - Build Command: `npm run build`
+   - Output Directory: `build`
+
+5. **Deploy!**
+
+### Other Deployment Options
 
 - **Netlify**: Drag and drop the `build` folder
-- **Vercel**: Connect your GitHub repository
 - **GitHub Pages**: Use the `gh-pages` package
 - **AWS S3**: Upload the `build` folder contents
 
